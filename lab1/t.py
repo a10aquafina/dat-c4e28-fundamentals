@@ -12,13 +12,13 @@ soup=BeautifulSoup(html_content,"html.parser")
 section=soup.find("section","section chart-grid")
 ul=section.div.ul
 li_list=ul.find_all("li")
-for i in li_list:
-    name=i.h3.string
-    link=i.h4.string
+for li in li_list:
+    link=li.h3.string
+    name=li.h4.string
     options = {
     'default_search': 'ytsearch', # tell downloader to search instead of directly downloading
     'max_downloads': 1, # Tell downloader to download only the first entry (audio)
     'format': 'bestaudio/audio'
 }
-dl=YoutubeDL(options)
-dl.download([name+link])
+    dl=YoutubeDL(options)
+    dl.download([name+link])
