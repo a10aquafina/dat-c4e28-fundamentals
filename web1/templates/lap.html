@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% for i in poems %}
+    
+    <!-- <a href="/test/{{ loop.index0 }}"><h3> title:{{i.title}}</h3></a> -->
+    <a href="{{url_for('detail', index=loop.index0)}}"><h3> title:{{i.title}}</h3></a>
+    <p>{{i.content}}</p>
+        {% if i.gender=="male" %}
+                <h5>by:mr.{{i.made_by}}</h5>
+        {%elif i.gender == "female" %}
+                <h5>by:mrs.{{i.made_by}}</h5>
+                
+        {%endif%}
+        
+    
+        {%endfor%}
+        
+   <!-- ktra bằng jinja2 -->
+   
+   
+{#<!-- <h3>{{poem["title"]}}</h3>
+<p>{{poem["content"]}}</p>
+<h5>{{poem["made_by"]}}</h5> -->
+  <!-- hoặc -->
+<!-- h3
+
+
+<hr>
+
+    <!-- <h3>thơ con bò</h3>
+    <p>
+        hôm nay trời nhẹ lên cao <br>
+        ádsdsfdsf
+    </p> -->#}
+</body>
+</html>
