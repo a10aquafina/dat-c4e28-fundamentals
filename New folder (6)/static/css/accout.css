@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Lora', serif;
+}
+html{
+    height: 100%;
+    
+}
+a{
+    text-decoration: none;
+}
+
+
+.right{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end
+
+}
+.right_top{
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+#update{
+    display: flex;
+    justify-content: flex-end;
+    height: 10%;
+}
+#delete{
+    display: flex;
+    justify-content: flex-end;
+    height: 10%;
+}
+.all{
+    padding: 5%;
+    height: 100%;
+    width: cover;
+    
+}
+.all_bot{
+    height: 100%;
+    
+    
+}
+
+
+
+
+
