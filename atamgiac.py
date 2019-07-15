@@ -12,7 +12,7 @@ for i in range(1,n+1,1):
     tamgiac["x"]=x
     tamgiac["y"]=y
     giatri.append(tamgiac)
-    bien=(giatri[i-1]["x"])**2+(giatri[i-1]["y"])**2
+
     b=giatri[i-1]["x"]+giatri[i-1]["y"]
     tham_so.append(b)
     print(tham_so)
